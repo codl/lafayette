@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang=fr>
+    <head>
+        <link rel='stylesheet' href='styles.css'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class='single'>
+        <header>
+            <a href="index.html">^ Home</a>
+        </header>
+        <nav class='prev'>
+            {% if prev%}
+            <a href="{{prev.link}}"><img src="{{prev.thumb}}"/></a>
+            {% endif %}
+        </nav>
+        <main>
+            <img src='{{image}}'/>
+        </main>
+        <nav class='next'>
+            {% if nxt %}
+            <a href="{{nxt.link}}"><img src="{{nxt.thumb}}"/></a>
+            {% endif %}
+        </nav>
+    </body>
+</html>
