@@ -78,7 +78,7 @@ def generate_gallery(path):
 
     with ZipFile(output / 'images.zip', 'w') as z:
         for image in images:
-            z.write(path/image, image)
+            z.write(path / image, image)
 
     with open(output / 'index.html', 'w') as f:
         context = dict(images=map(lambda i: dict(link=i.with_suffix('.html'), thumb=Path('thumbnails') / i.with_suffix('.jpeg')), images))
